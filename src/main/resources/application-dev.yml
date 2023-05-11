@@ -1,0 +1,19 @@
+server:
+  port: 8081
+swagger:
+  enable: true
+spring:
+  profiles: dev
+  datasource:
+    url: jdbc:mysql://mysql.cs.xieyi.me:3306/distributed_lock?useUnicode=true&useSSL=false&useTimezone=true&serverTimezone=GMT%2B8&characterEncoding=UTF-8
+    username: tomcat
+    password: 9558895588
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 5
+
+
+logging:
+  file: /tmp/${spring.application.name}/app.log
+
+
